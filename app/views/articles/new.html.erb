@@ -1,5 +1,7 @@
-<h1>New Article</h1>
+<h1 class="col-sm-offset-2">New Article</h1>
 
 <%= render 'form' %>
+<div class="col-xs-4 col-xs-offset-2">
+  <%= link_to 'Cancle request and return back', articles_path %>
+</div>  
 
-<%= link_to 'Back', articles_path %>
