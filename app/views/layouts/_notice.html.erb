@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    
+    <% if @article.errors.any? %>
+      <div id="error_explanation" class='alert center'>
+        <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
+        <a href="#" class="close" data-dismiss="alert">&#215;</a></h2>
+         <ul>
+          <% @article.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% elsif notice %>
+      <div id="notice" class="alert">
+        <p> <%= notice %> <a href="#" class="close" data-dismiss="alert">&#215;</a></p>
+      </div>
+    <% end %>
+    
+  </div>
+</div>
+
